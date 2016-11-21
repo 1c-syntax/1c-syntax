@@ -3,6 +3,7 @@
   "version": "1.8.1",
   "description": "Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors",
   "dependencies": {
+   "atom-grammar-test": "^0.6.3",
     "cson": "^4.0.0",
     "plist": "^2.0.1",
     "yamljs": "^0.2.8"

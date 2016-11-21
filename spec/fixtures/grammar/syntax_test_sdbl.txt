@@ -1,0 +1,44 @@
+// SYNTAX TEST "source.sdbl"
+ВЫБРАТЬ
+// <- keyword.control.sdbl
+// Комментарий запроса
+// <- comment.line.double-slash.sdbl
+    "Многострочная
+//  ^ string.quoted.double.sdbl
+    // это Комментарий
+//  ^ comment.line.double-slash.sdbl
+    с экранированной "" кавычкой
+//                   ^^ constant.character.escape.sdbl
+    строка" КАК Поле,
+//  ^^^^^^^ string.quoted.double.sdbl
+//  ^ string.quoted.double.sdbl
+//          ^^^ keyword.control.sdbl
+//              ^ not:keyword.control.sdbl
+//                  ^ keyword.operator.sdbl
+    Неопределено КАК Поле2,
+//  ^ constant.language.sdbl
+    0.0 КАК ДробноеЧисло,
+//  ^^^ constant.numeric.sdbl
+    0 КАК ЦелоеЧисло,
+//  ^ constant.numeric.sdbl
+    ВЫБОР КОГДА НЕ 0 = 0 * 1 ТОГДА ИСТИНА ИНАЧЕ ЛОЖЬ КОНЕЦ КАК Условие,
+//  ^^^^^ keyword.control.conditional.sdbl
+//        ^^^^^ keyword.control.conditional.sdbl
+//              ^^ keyword.operator.logical.sdbl
+//                   ^ keyword.operator.comparison.sdbl
+//                       ^ keyword.operator.arithmetic.sdbl
+//                           ^^^^^ keyword.control.conditional.sdbl
+//                                        ^^^^^ keyword.control.conditional.sdbl
+//                                                   ^^^^^ keyword.control.conditional.sdbl
+    ГОД(ДАТАВРЕМЯ(1, 1, 1)) КАК Функция,
+//  ^^^ support.function.sdbl
+//     ^ not:support.function.sdbl
+//      ^ support.function.sdbl
+    ВЫРАЗИТЬ(0 КАК Число) КАК Выражение,
+//  ^ keyword.control.sdbl
+//                 ^^^^^ support.type.sdbl
+    ВЫБОР КОГДА Неопределено ССЫЛКА Справочник.Справочник1 ТОГДА ИСТИНА КОНЕЦ КАК Ссылка,
+//                           ^^^^^^ keyword.operator.logical.sdbl
+//                                                                                ^^^^^^ not:keyword.operator.logical.sdbl
+    &Параметр КАК Параметр
+//  ^^^^^^^^^ variable.parameter.sdbl
