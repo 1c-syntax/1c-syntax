@@ -1,7 +1,7 @@
 grammarTest = require 'atom-grammar-test'
 path = require 'path'
 
-describe "language-1c-bsl", ->
+describe "1c-syntax", ->
 
   beforeEach ->
     waitsForPromise ->
