@@ -60,7 +60,7 @@ patterns:
     name: support.function.sdbl
     match: (?i)(?<=[^\wа-яё\.]|^)(Год|Year|Квартал|Quarter|Месяц|Month|ДеньГода|DayOfYear|День|Day|Неделя|Week|ДеньНедели|Weekday|Час|Hour|Минута|Minute|Секунда|Second|НачалоПериода|BeginOfPeriod|КонецПериода|EndOfPeriod|ДобавитьКДате|DateAdd|РазностьДат|DateDiff|Полугодие|HalfYear|Декада|TenDays)(?=\()
 
-- comment: "Функции работы с числами"
+  - comment: "Функции работы с числами"
     name: support.function.sdbl
     match: (?i)(?<=[^\wа-яё\.]|^)(ACOS|COS|ASIN|SIN|ATAN|TAN|EXP|POW|LOG|LOG10|Цел|Int|Окр|Round|SQRT)(?=\()
 
