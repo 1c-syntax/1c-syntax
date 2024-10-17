@@ -46,7 +46,7 @@ patterns:
     match: (,|;)
 
   - name: keyword.control.sdbl
-    match: (?i)(?<=[^\wа-яё\.]|^)(Выбрать|Select|Разрешенные|Allowed|Различные|Distinct|Первые|Top|Как|As|ПустаяТаблица|EpmtyTable|Поместить|Into|Уничтожить|Drop|Из|From|((Левое|Left|Правое|Right|Полное|Full)\s+(Внешнее\s+|Outer\s+)?Соединение|Join)|((Внутреннее|Inner)\s+Соединение|Join)|Где|Where|(Сгруппировать\s+По)|(Group\s+By)|Имеющие|Having|Объединить(\s+Все)?|Union(\s+All)?|(Упорядочить\s+По)|(Order\s+By)|Автоупорядочивание|Autoorder|Итоги|Totals|По(\s+Общие)?|By(\s+Overall)?|(Только\s+)?Иерархия|(Only\s+)?Hierarchy|Периодами|Periods|Индексировать|Index|Выразить|Cast|Возр|Asc|Убыв|Desc|Для\s+Изменения|(For\s+Update(\s+Of)?)|Спецсимвол|Escape)(?=[^\wа-яё\.]|$)
+    match: (?i)(?<=[^\wа-яё\.]|^)(Выбрать|Select|Разрешенные|Allowed|Различные|Distinct|Первые|Top|Как|As|ПустаяТаблица|EmptyTable|Поместить|Into|Уничтожить|Drop|Из|From|((Левое|Left|Правое|Right|Полное|Full)\s+(Внешнее\s+|Outer\s+)?Соединение|Join)|((Внутреннее|Inner)\s+Соединение|Join)|Где|Where|(Сгруппировать\s+По(\s+Группирующим\s+Наборам)?)|(Group\s+By(\s+Grouping\s+Set)?)|Имеющие|Having|Объединить(\s+Все)?|Union(\s+All)?|(Упорядочить\s+По)|(Order\s+By)|Автоупорядочивание|Autoorder|Итоги|Totals|По(\s+Общие)?|By(\s+Overall)?|(Только\s+)?Иерархия|(Only\s+)?Hierarchy|Периодами|Periods|Индексировать|Index|Выразить|Cast|Возр|Asc|Убыв|Desc|Для\s+Изменения|(For\s+Update(\s+Of)?)|Спецсимвол|Escape|СгруппированоПо|GroupedBy)(?=[^\wа-яё\.]|$)
 
   - comment: "Функции языка запросов"
     name: support.function.sdbl
@@ -54,11 +54,15 @@ patterns:
 
   - comment: "Функции работы со строками"
     name: support.function.sdbl
-    match: (?i)(?<=[^\wа-яё\.]|^)(Подстрока|Substring)(?=\()
+    match: (?i)(?<=[^\wа-яё\.]|^)(Подстрока|Substring|НРег|Lower|ВРег|Upper|Лев|Left|Прав|Right|ДлинаСтроки|StringLength|СтрНайти|StrFind|СтрЗаменить|StrReplace|СокрЛП|TrimAll|СокрЛ|TrimL|СокрП|TrimR)(?=\()
 
   - comment: "Функции работы с датами"
     name: support.function.sdbl
-    match: (?i)(?<=[^\wа-яё\.]|^)(Год|Year|Квартал|Quarter|Месяц|Month|ДеньГода|DayOfYear|День|Day|Неделя|Week|ДеньНедели|Weekday|Час|Hour|Минута|Minute|Секунда|Second|НачалоПериода|BeginOfPeriod|КонецПериода|EndOfPeriod|ДобавитьКДате|DateAdd|РазностьДат|DateDiff)(?=\()
+    match: (?i)(?<=[^\wа-яё\.]|^)(Год|Year|Квартал|Quarter|Месяц|Month|ДеньГода|DayOfYear|День|Day|Неделя|Week|ДеньНедели|Weekday|Час|Hour|Минута|Minute|Секунда|Second|НачалоПериода|BeginOfPeriod|КонецПериода|EndOfPeriod|ДобавитьКДате|DateAdd|РазностьДат|DateDiff|Полугодие|HalfYear|Декада|TenDays)(?=\()
+
+- comment: "Функции работы с числами"
+    name: support.function.sdbl
+    match: (?i)(?<=[^\wа-яё\.]|^)(ACOS|COS|ASIN|SIN|ATAN|TAN|EXP|POW|LOG|LOG10|Цел|Int|Окр|Round|SQRT)(?=\()
 
   - comment: "Агрегатные функции"
     name: support.function.sdbl
@@ -66,10 +70,10 @@ patterns:
 
   - comment: "Прочие функции"
     name: support.function.sdbl
-    match: (?i)(?<=[^\wа-яё\.]|^)(ЕстьNULL|IsNULL|Представление|Presentation|ПредставлениеСсылки|RefPresentation|ТипЗначения|ValueType)(?=\()
+    match: (?i)(?<=[^\wа-яё\.]|^)(ЕстьNULL|IsNULL|Представление|Presentation|ПредставлениеСсылки|RefPresentation|ТипЗначения|ValueType|АвтономерЗаписи|RecordAutoNumber|РазмерХранимыхДанных|StoredDataSize|УникальныйИдентификатор|UUID)(?=\()
 
   - name: support.type.sdbl
-    match: (?i)(?<=[^\wа-яё\.])(Число|Number|Строка|String|Дата|Date)(?=[^\wа-яё\.]|$)
+    match: (?i)(?<=[^\wа-яё\.])(Число|Number|Строка|String|Дата|Date|Булево|Boolean)(?=[^\wа-яё\.]|$)
 
   - name: variable.parameter.sdbl
     match: (&[\wа-яё]+)
