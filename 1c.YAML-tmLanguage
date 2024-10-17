@@ -114,6 +114,22 @@ patterns:
     name: keyword.other.section.bsl
     match: (?i)#(КонецОбласти|EndRegion)
 
+  - comment: "Delete start"
+    name: keyword.other.section.bsl
+    match: (?i)#(Удаление|Delete)
+
+  - comment: "Delete end"
+    name: keyword.other.section.bsl
+    match: (?i)#(КонецУдаления|EndDelete)
+
+  - comment: "Inster start"
+    name: keyword.other.section.bsl
+    match: (?i)#(Вставка|Insert)
+
+  - comment: "Insert end"
+    name: keyword.other.section.bsl
+    match: (?i)#(КонецВставки|EndInsert)
+
 repository:
   miscellaneous:
     patterns:
