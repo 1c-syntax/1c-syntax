@@ -3,7 +3,7 @@
 // <- keyword.control.native.bsl
 
 #stack
-// <- keyword.control.native.bsl
+// <- keyword.control.stack.bsl
 
 #Использовать cmdline
 // <- keyword.control.import.bsl
