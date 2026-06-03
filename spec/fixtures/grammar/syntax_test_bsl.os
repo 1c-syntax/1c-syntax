@@ -2,6 +2,9 @@
 #native
 // <- keyword.control.native.bsl
 
+#stack
+// <- keyword.control.stack.bsl
+
 #Использовать cmdline
 // <- keyword.control.import.bsl
 
