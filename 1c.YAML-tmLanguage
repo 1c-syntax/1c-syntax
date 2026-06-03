@@ -81,7 +81,7 @@ patterns:
     match: (?i)#(Использовать|Use)(?=[^\wа-яё\.]|$)
     
   - name: keyword.control.native.bsl
-    match: (?i)#native
+    match: (?i)#(native|stack)
 
   - name: keyword.control.bsl
     match: (?i:(?<=[^\wа-яё\.]|^)(Прервать|Break|Продолжить|Continue|Возврат|Return)(?=[^\wа-яё\.]|$))
