@@ -39,7 +39,7 @@ patterns:
     beginCaptures:
       '1': {name: storage.type.var.bsl}
       '2': {name: variable.bsl}
-    end: (;)
+    end: (;)|$
     endCaptures:
       '1': {name: keyword.operator.bsl}
     patterns:
