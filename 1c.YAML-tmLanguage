@@ -735,6 +735,7 @@ repository:
         endCaptures:
           '1': {name: punctuation.bracket.end.bsl}
         patterns:
+        - include: '#annotations'
         - include: '#basic'
         - name: keyword.operator.assignment.bsl
           match: (=)
