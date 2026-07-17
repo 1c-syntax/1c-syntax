@@ -32,6 +32,12 @@
 //               ^ variable.bsl
 //                 ^ storage.modifier.bsl
 
+Перем ШаблонКонтрола
+// <- storage.type.var.bsl
+//    ^ variable.bsl
+// Комментарий после Перем без точки с запятой
+// <- comment.line.double-slash.bsl
+
 #Если Сервер Тогда
 // <- keyword.other.preprocessor.bsl
 //    ^^^^^^ keyword.other.preprocessor.bsl
