@@ -4,6 +4,11 @@
 // ^ keyword.other.section.bsl
 //       ^ entity.name.section.bsl
 
+#Область ИмяОбласти // Комментарий в строке области
+// <- keyword.other.section.bsl
+//       ^ entity.name.section.bsl
+//                  ^^ comment.line.double-slash.bsl
+
 Перем А Экспорт;
 // <- storage.type.var.bsl
 //    ^ variable.bsl
@@ -35,6 +40,14 @@
 #Если Сервер Тогда
 // <- keyword.other.preprocessor.bsl
 //    ^^^^^^ keyword.other.preprocessor.bsl
+
+#Если Сервер Тогда // Комментарий в строке директивы
+// <- keyword.other.preprocessor.bsl
+//                 ^^ comment.line.double-slash.bsl
+
+#КонецЕсли // Комментарий в строке директивы
+// <- keyword.other.preprocessor.bsl
+//         ^^ comment.line.double-slash.bsl
 
 // Комментарий процедуры
 // <- comment.line.double-slash.bsl
